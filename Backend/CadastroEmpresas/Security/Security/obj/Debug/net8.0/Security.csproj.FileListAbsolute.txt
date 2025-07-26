@@ -1,0 +1,15 @@
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\bin\Debug\net8.0\Security.deps.json
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\bin\Debug\net8.0\Security.dll
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\bin\Debug\net8.0\Security.pdb
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\bin\Debug\net8.0\Domain.dll
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\bin\Debug\net8.0\Domain.pdb
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\obj\Debug\net8.0\Security.csproj.AssemblyReference.cache
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\obj\Debug\net8.0\Security.GeneratedMSBuildEditorConfig.editorconfig
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\obj\Debug\net8.0\Security.AssemblyInfoInputs.cache
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\obj\Debug\net8.0\Security.AssemblyInfo.cs
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\obj\Debug\net8.0\Security.csproj.CoreCompileInputs.cache
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\obj\Debug\net8.0\Security.csproj.Up2Date
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\obj\Debug\net8.0\Security.dll
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\obj\Debug\net8.0\refint\Security.dll
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\obj\Debug\net8.0\Security.pdb
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\obj\Debug\net8.0\ref\Security.dll

@@ -1,0 +1,11 @@
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Domain\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Domain\Domain\bin\Debug\net8.0\Domain.dll
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Domain\Domain\bin\Debug\net8.0\Domain.pdb
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Domain\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Domain\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Domain\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Domain\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Domain\Domain\obj\Debug\net8.0\Domain.dll
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Domain\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Domain\Domain\obj\Debug\net8.0\Domain.pdb
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Domain\Domain\obj\Debug\net8.0\ref\Domain.dll
