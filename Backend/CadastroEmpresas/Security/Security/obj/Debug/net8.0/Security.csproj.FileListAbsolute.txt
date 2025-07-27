@@ -8,6 +8,7 @@ C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\obj\De
 C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\obj\Debug\net8.0\Security.AssemblyInfoInputs.cache
 C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\obj\Debug\net8.0\Security.AssemblyInfo.cs
 C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\obj\Debug\net8.0\Security.csproj.CoreCompileInputs.cache
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\obj\Debug\net8.0\Security.sourcelink.json
 C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\obj\Debug\net8.0\Security.csproj.Up2Date
 C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\obj\Debug\net8.0\Security.dll
 C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Security\Security\obj\Debug\net8.0\refint\Security.dll

@@ -1,8 +1,9 @@
 ﻿using CadastroEmpresas.src.Domain.Entities;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CadastroEmpresas.Domain.Entities
 {
-
     public class Empresa
     {
         private Int32 _idEmpresa;
@@ -15,14 +16,12 @@ namespace CadastroEmpresas.Domain.Entities
         private String _naturezaJuridica;
         private String _atividadePrincipal;
         private String _logradouro;
-        private Int32 _numero;
+        private String _numero;
         private String _complemento;
         private String _bairro;
         private String _municipio;
         private String _uf;
         private String _cep;
-        private Usuario _usuario;
-        private Int32 _idUsuario;
 
         public Int32 IdEmpresa { get => getIdEmpresa(); set => setIdEmpresa(value); }
         public String NomeEmpresarial { get => getNomeEmpresarial(); set => setNomeEmpresarial(value); }
@@ -34,14 +33,12 @@ namespace CadastroEmpresas.Domain.Entities
         public String NaturezaJuridica { get => getNaturezaJuridica(); set => setNaturezaJuridica(value); }
         public String AtividadePrincipal { get => getAtividadePrincipal(); set => setAtividadePrincipal(value); }
         public String Logradouro { get => getLogradouro(); set => setLogradouro(value); }
-        public Int32 Numero { get => getNumero(); set => setNumero(value); }
+        public String Numero { get => getNumero(); set => setNumero(value); }
         public String Complemento { get => getComplemento(); set => setComplemento(value); }
         public String Bairro { get => getBairro(); set => setBairro(value); }
         public String Municipio { get => getMunicipio(); set => setMunicipio(value); }
         public String Uf { get => getUf(); set => setUf(value); }
         public String Cep { get => getCep(); set => setCep(value); }
-        public Usuario Usuario { get => getUsuario(); set => setUsuario(value); }
-        public Int32 IdUsuario { get => getIdUsuario(); set => setIdUsuario(value); }
 
         private Int32 getIdEmpresa()
         {
@@ -123,11 +120,11 @@ namespace CadastroEmpresas.Domain.Entities
         {
             _logradouro = valor;
         }
-        private Int32 getNumero()
+        private String getNumero()
         {
             return _numero;
         }
-        private void setNumero(Int32 valor)
+        private void setNumero(String valor)
         {
             _numero = valor;
         }
@@ -170,22 +167,6 @@ namespace CadastroEmpresas.Domain.Entities
         private void setCep(String valor)
         {
             _cep = valor;
-        }
-        private Usuario getUsuario()
-        {
-            return _usuario;
-        }
-        private void setUsuario(Usuario valor)
-        {
-            _usuario = valor;
-        }
-        private Int32 getIdUsuario()
-        {
-            return _idUsuario;
-        }
-        private void setIdUsuario(Int32 valor)
-        {
-            _idUsuario = valor;
         }
     }
 }

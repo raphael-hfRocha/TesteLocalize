@@ -3,43 +3,40 @@
   "WorkspaceRootPath": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BA7775E6-9978-4CC4-B68F-DCD0A179FFCD}|API\\API\\API.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\api\\api\\controllers\\empresacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA7775E6-9978-4CC4-B68F-DCD0A179FFCD}|API\\API\\API.csproj|solutionrelative:api\\api\\controllers\\empresacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97C6CB31-B94F-4464-825D-40DD5841D103}|Application\\Application\\Application.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\application\\application\\services\\servicesconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97C6CB31-B94F-4464-825D-40DD5841D103}|Application\\Application\\Application.csproj|solutionrelative:application\\application\\services\\servicesconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97C6CB31-B94F-4464-825D-40DD5841D103}|Application\\Application\\Application.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\application\\application\\services\\empresaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97C6CB31-B94F-4464-825D-40DD5841D103}|Application\\Application\\Application.csproj|solutionrelative:application\\application\\services\\empresaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{701D9542-DAC9-4681-8E0B-462A5A919480}|Infrastructure\\Infrastructure\\Infrastructure.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\infrastructure\\infrastructure\\externalservices\\receitawsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{701D9542-DAC9-4681-8E0B-462A5A919480}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\externalservices\\receitawsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{701D9542-DAC9-4681-8E0B-462A5A919480}|Infrastructure\\Infrastructure\\Infrastructure.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\infrastructure\\infrastructure\\repositories\\empresarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701D9542-DAC9-4681-8E0B-462A5A919480}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\repositories\\empresarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BA7775E6-9978-4CC4-B68F-DCD0A179FFCD}|API\\API\\API.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\api\\api\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA7775E6-9978-4CC4-B68F-DCD0A179FFCD}|API\\API\\API.csproj|solutionrelative:api\\api\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC4338E1-0E12-4345-A577-3A0EF3815EC5}|..\\Entidades\\Persistense\\Persistense\\Persistense.csproj|c:\\.net\\projetos\\testelocalize\\backend\\entidades\\persistense\\persistense\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BBEEC1AB-BE90-4B9E-89E4-F233411015B4}|Security\\Security\\Security.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\security\\security\\jwt\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBEEC1AB-BE90-4B9E-89E4-F233411015B4}|Security\\Security\\Security.csproj|solutionrelative:security\\security\\jwt\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBEEC1AB-BE90-4B9E-89E4-F233411015B4}|Security\\Security\\Security.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\security\\security\\jwt\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBEEC1AB-BE90-4B9E-89E4-F233411015B4}|Security\\Security\\Security.csproj|solutionrelative:security\\security\\jwt\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA7775E6-9978-4CC4-B68F-DCD0A179FFCD}|API\\API\\API.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\api\\api\\controllers\\empresacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA7775E6-9978-4CC4-B68F-DCD0A179FFCD}|API\\API\\API.csproj|solutionrelative:api\\api\\controllers\\empresacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A735D785-FDDF-4D8B-B618-B0E22B7F7178}|Domain\\Domain\\Domain.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\domain\\domain\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A735D785-FDDF-4D8B-B618-B0E22B7F7178}|Domain\\Domain\\Domain.csproj|solutionrelative:domain\\domain\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BBEEC1AB-BE90-4B9E-89E4-F233411015B4}|Security\\Security\\Security.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\security\\security\\jwt\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBEEC1AB-BE90-4B9E-89E4-F233411015B4}|Security\\Security\\Security.csproj|solutionrelative:security\\security\\jwt\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A735D785-FDDF-4D8B-B618-B0E22B7F7178}|Domain\\Domain\\Domain.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\domain\\domain\\entities\\empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A735D785-FDDF-4D8B-B618-B0E22B7F7178}|Domain\\Domain\\Domain.csproj|solutionrelative:domain\\domain\\entities\\empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5DBAAEA8-999F-403E-93EF-92A7EC91C9AD}|Persistence\\Persistence\\Persistence.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\persistence\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DBAAEA8-999F-403E-93EF-92A7EC91C9AD}|Persistence\\Persistence\\Persistence.csproj|solutionrelative:persistence\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97C6CB31-B94F-4464-825D-40DD5841D103}|Application\\Application\\Application.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\application\\application\\dtos\\empresadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97C6CB31-B94F-4464-825D-40DD5841D103}|Application\\Application\\Application.csproj|solutionrelative:application\\application\\dtos\\empresadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BBEEC1AB-BE90-4B9E-89E4-F233411015B4}|Security\\Security\\Security.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\security\\security\\jwt\\jwtconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBEEC1AB-BE90-4B9E-89E4-F233411015B4}|Security\\Security\\Security.csproj|solutionrelative:security\\security\\jwt\\jwtconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C6CB31-B94F-4464-825D-40DD5841D103}|Application\\Application\\Application.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\application\\application\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97C6CB31-B94F-4464-825D-40DD5841D103}|Application\\Application\\Application.csproj|solutionrelative:application\\application\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701D9542-DAC9-4681-8E0B-462A5A919480}|Infrastructure\\Infrastructure\\Infrastructure.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\infrastructure\\infrastructure\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701D9542-DAC9-4681-8E0B-462A5A919480}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,8 +45,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "DockedWidth": 307,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,135 +59,128 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 379,
+          "SelectedChildIndex": 1,
+          "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ReceitaWsService.cs",
-              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Infrastructure\\Infrastructure\\ExternalServices\\ReceitaWsService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\ExternalServices\\ReceitaWsService.cs",
-              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Infrastructure\\Infrastructure\\ExternalServices\\ReceitaWsService.cs",
-              "RelativeToolTip": "Infrastructure\\Infrastructure\\ExternalServices\\ReceitaWsService.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T08:07:17.634Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EmpresaService.cs",
-              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Application\\Application\\Services\\EmpresaService.cs",
-              "RelativeDocumentMoniker": "Application\\Application\\Services\\EmpresaService.cs",
-              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Application\\Application\\Services\\EmpresaService.cs",
-              "RelativeToolTip": "Application\\Application\\Services\\EmpresaService.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T09:07:31.765Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ServicesConfiguration.cs",
-              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Application\\Application\\Services\\ServicesConfiguration.cs",
-              "RelativeDocumentMoniker": "Application\\Application\\Services\\ServicesConfiguration.cs",
-              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Application\\Application\\Services\\ServicesConfiguration.cs",
-              "RelativeToolTip": "Application\\Application\\Services\\ServicesConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T08:54:34.536Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "JwtService.cs",
-              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Security\\Security\\JWT\\JwtService.cs",
-              "RelativeDocumentMoniker": "Security\\Security\\JWT\\JwtService.cs",
-              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Security\\Security\\JWT\\JwtService.cs",
-              "RelativeToolTip": "Security\\Security\\JWT\\JwtService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T08:09:22.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\API\\API\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "API\\API\\Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\API\\API\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "API\\API\\Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T08:10:20.635Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "EmpresaController.cs",
               "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\API\\API\\Controllers\\EmpresaController.cs",
               "RelativeDocumentMoniker": "API\\API\\Controllers\\EmpresaController.cs",
               "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\API\\API\\Controllers\\EmpresaController.cs",
               "RelativeToolTip": "API\\API\\Controllers\\EmpresaController.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAAA8AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T08:10:33.328Z",
+              "WhenOpened": "2025-07-27T08:33:58.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmpresaRepository.cs",
+              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Infrastructure\\Infrastructure\\Repositories\\EmpresaRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Repositories\\EmpresaRepository.cs",
+              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Infrastructure\\Infrastructure\\Repositories\\EmpresaRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Infrastructure\\Repositories\\EmpresaRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T06:40:18.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Security\\Security\\JWT\\Configuration.cs",
+              "RelativeDocumentMoniker": "Security\\Security\\JWT\\Configuration.cs",
+              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Security\\Security\\JWT\\Configuration.cs",
+              "RelativeToolTip": "Security\\Security\\JWT\\Configuration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T06:39:15.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Security\\Security\\JWT\\TokenService.cs",
+              "RelativeDocumentMoniker": "Security\\Security\\JWT\\TokenService.cs",
+              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Security\\Security\\JWT\\TokenService.cs",
+              "RelativeToolTip": "Security\\Security\\JWT\\TokenService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAACEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T06:38:56.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\API\\API\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "API\\API\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\API\\API\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "API\\API\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAAAFcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T06:07:03.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "JwtConfig.cs",
+              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Security\\Security\\JWT\\JwtConfig.cs",
+              "RelativeDocumentMoniker": "Security\\Security\\JWT\\JwtConfig.cs",
+              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Security\\Security\\JWT\\JwtConfig.cs",
+              "RelativeToolTip": "Security\\Security\\JWT\\JwtConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T06:38:53.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Application\\Application\\Services\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "Application\\Application\\Services\\UsuarioService.cs",
+              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Application\\Application\\Services\\UsuarioService.cs",
+              "RelativeToolTip": "Application\\Application\\Services\\UsuarioService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAADcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T06:37:23.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UsuarioRepository.cs",
+              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Infrastructure\\Infrastructure\\Repositories\\UsuarioRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Repositories\\UsuarioRepository.cs",
+              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Infrastructure\\Infrastructure\\Repositories\\UsuarioRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Infrastructure\\Repositories\\UsuarioRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAA4AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T06:11:06.484Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\Entidades\\Persistense\\Persistense\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "..\\Entidades\\Persistense\\Persistense\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\Entidades\\Persistense\\Persistense\\ApplicationDbContext.cs",
-              "RelativeToolTip": "..\\Entidades\\Persistense\\Persistense\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAAA4AAAA0AAAAAAAAAA==",
+              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Persistence\\Persistence\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Persistence\\Persistence\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Persistence\\Persistence\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Persistence\\Persistence\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T08:07:51.101Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Domain\\Domain\\Entities\\Usuario.cs",
-              "RelativeDocumentMoniker": "Domain\\Domain\\Entities\\Usuario.cs",
-              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Domain\\Domain\\Entities\\Usuario.cs",
-              "RelativeToolTip": "Domain\\Domain\\Entities\\Usuario.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAADwvzgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T08:06:01.158Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Empresa.cs",
-              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Domain\\Domain\\Entities\\Empresa.cs",
-              "RelativeDocumentMoniker": "Domain\\Domain\\Entities\\Empresa.cs",
-              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Domain\\Domain\\Entities\\Empresa.cs",
-              "RelativeToolTip": "Domain\\Domain\\Entities\\Empresa.cs",
-              "ViewState": "AgIAAKMAAAAAAAAAAAAAAK0AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T08:05:22.023Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EmpresaDTO.cs",
-              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Application\\Application\\DTOs\\EmpresaDTO.cs",
-              "RelativeDocumentMoniker": "Application\\Application\\DTOs\\EmpresaDTO.cs",
-              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Application\\Application\\DTOs\\EmpresaDTO.cs",
-              "RelativeToolTip": "Application\\Application\\DTOs\\EmpresaDTO.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABkAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T08:02:49.892Z",
+              "WhenOpened": "2025-07-26T09:45:31.615Z",
               "EditorCaption": ""
             }
           ]
