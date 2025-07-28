@@ -27,8 +27,8 @@ export default {
                     
                     this.$store.commit('setUsuario', usuarioLogado);
                     
-                    console.log('✅ Login realizado com sucesso!', usuarioLogado);
-                    console.log('🔑 Token salvo no localStorage');
+                    console.log('Login realizado com sucesso!', usuarioLogado);
+                    console.log('Token salvo no localStorage');
                     
                     this.$router.push({ name: 'empresa' });
                 }
