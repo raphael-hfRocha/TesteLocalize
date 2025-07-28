@@ -39,26 +39,4 @@ const router = new Router({
     ]
 })
 
-// Redirecionar para a página de login se o usuário não estiver autenticado
-router.beforeEach((to, from, next) => {
-    // Verificar se a rota requer autenticação
-    if (to.matched.some(record => record.meta.requiresAuth)) {
-        // Verificar se existe token de autenticação
-        const token = localStorage.getItem('authToken');
-        
-        if (!token) {
-            // Não está autenticado, redirecionar para login
-            console.log('🔒 Acesso negado. Redirecionando para login...');
-            next({ name: 'login' });
-        } else {
-            // Token existe, permitir acesso
-            console.log('✅ Usuário autenticado. Permitindo acesso...');
-            next();
-        }
-    } else {
-        // Rota não requer autenticação, permitir acesso
-        next();
-    }
-});
-
 export default router;
