@@ -1,7 +1,7 @@
 <template>
   <div id="usuario">
     <div class="d-flex justify-content-between align-items-center mb-4">
-      <h2>Minhas Empresas</h2>
+      <h2>Página de Empresas</h2>
       <div>
         <b-button
           variant="danger"
