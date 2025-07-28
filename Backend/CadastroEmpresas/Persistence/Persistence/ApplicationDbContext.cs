@@ -14,8 +14,8 @@ public class ApplicationDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Empresa>(entity =>
-        {
+         modelBuilder.Entity<Empresa>(entity =>
+         {
             entity.ToTable("EMPRESA");
             entity.HasKey(e => e.IdEmpresa);
             entity.Property(e => e.IdEmpresa).HasColumnName("EMPRESA_ID");
@@ -34,6 +34,11 @@ public class ApplicationDbContext : DbContext
             entity.Property(e => e.Municipio).HasColumnName("EMPRESA_MUNICIPIO").HasMaxLength(40);
             entity.Property(e => e.Uf).HasColumnName("EMPRESA_UF").HasMaxLength(2);
             entity.Property(e => e.Cep).HasColumnName("EMPRESA_CEP").HasMaxLength(8);
+            entity.Property(e => e.IdUsuario).HasColumnName("USUARIO_ID");
+            entity.HasOne(e => e.Usuario)
+                  .WithMany(u => u.Empresas)
+                  .HasForeignKey(e => e.IdUsuario)
+                  .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<Usuario>(entity =>
@@ -43,8 +48,9 @@ public class ApplicationDbContext : DbContext
             entity.Property(u => u.IdUsuario).HasColumnName("USUARIO_ID");
             entity.Property(u => u.Nome).HasColumnName("USUARIO_NOME").HasMaxLength(100);
             entity.Property(u => u.Email).HasColumnName("USUARIO_EMAIL").HasMaxLength(50);
-            entity.Property(u => u.Senha).HasColumnName("USUARIO_SENHA").HasMaxLength(20);
+            entity.Property(u => u.Senha).HasColumnName("USUARIO_SENHA").HasMaxLength(255); // Aumentado para 255 para suportar hash
         });
+        
 
         base.OnModelCreating(modelBuilder);
     }

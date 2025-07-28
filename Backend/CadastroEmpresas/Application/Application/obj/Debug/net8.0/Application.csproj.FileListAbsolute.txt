@@ -1,9 +1,3 @@
-C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\obj\Debug\net8.0\Application.csproj.AssemblyReference.cache
-C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\obj\Debug\net8.0\Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
-C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
-C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
-C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\obj\Debug\net8.0\Application.sourcelink.json
 C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\bin\Debug\net8.0\Application.deps.json
 C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\bin\Debug\net8.0\Application.dll
 C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\bin\Debug\net8.0\Application.pdb
@@ -15,6 +9,12 @@ C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\
 C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\bin\Debug\net8.0\Infrastructure.pdb
 C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\bin\Debug\net8.0\Security.pdb
 C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\bin\Debug\net8.0\Persistence.pdb
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\obj\Debug\net8.0\Application.csproj.AssemblyReference.cache
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\obj\Debug\net8.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
+C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\obj\Debug\net8.0\Application.sourcelink.json
 C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\obj\Debug\net8.0\Applicat.44B5EDA2.Up2Date
 C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\obj\Debug\net8.0\Application.dll
 C:\.NET\Projetos\TesteLocalize\Backend\CadastroEmpresas\Application\Application\obj\Debug\net8.0\refint\Application.dll

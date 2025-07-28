@@ -972,7 +972,8 @@
       },
       "Infrastructure/1.0.0": {
         "dependencies": {
-          "Persistence": "1.0.0"
+          "Persistence": "1.0.0",
+          "Security": "1.0.0"
         },
         "runtime": {
           "Infrastructure.dll": {

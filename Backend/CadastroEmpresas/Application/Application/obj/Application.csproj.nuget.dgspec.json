@@ -184,6 +184,9 @@
             "projectReferences": {
               "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Persistence\\Persistence\\Persistence.csproj": {
                 "projectPath": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Persistence\\Persistence\\Persistence.csproj"
+              },
+              "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Security\\Security\\Security.csproj": {
+                "projectPath": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Security\\Security\\Security.csproj"
               }
             }
           }

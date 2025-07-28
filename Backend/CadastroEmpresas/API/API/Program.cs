@@ -11,13 +11,50 @@ using Microsoft.IdentityModel.Tokens;
 using System;
 using static Security.JWT.JwtConfig;
 using Security.JWT;
+using Security.PasswordHasher;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddTransient<TokenService>();
 builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
-var confsJWT = new JWT();
-builder.Configuration.GetSection("JWT").Bind(confsJWT);
+
+// Configuração CORS mais permissiva para desenvolvimento
+var corsOrigins = builder.Configuration.GetSection("cors:Endpoint").Get<string[]>()
+    ?? new[] { "http://localhost:4200", "https://localhost:4200", "http://localhost:8080" };
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "CorsPolicy",
+        corsBuilder =>
+        {
+            if (builder.Environment.IsDevelopment())
+            {
+                // Em desenvolvimento, permitir qualquer origem (incluindo file://)
+                corsBuilder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+            }
+            else
+            {
+                // Em produção, usar origens específicas
+                corsBuilder.WithOrigins(corsOrigins)
+                    .AllowAnyMethod()
+                    .AllowCredentials()
+                    .AllowAnyHeader();
+            }
+        });
+});
+
+// Configuração JWT simplificada
+var jwtSecret = builder.Configuration["JWT:Secret"];
+var jwtIssuer = builder.Configuration["JWT:ValidIssuer"];
+var jwtAudience = builder.Configuration["JWT:ValidAudience"];
+
+if (string.IsNullOrEmpty(jwtSecret))
+{
+    throw new InvalidOperationException("JWT:Secret não configurado no appsettings.json");
+}
 
 builder.Services.AddAuthentication(options =>
 {
@@ -33,38 +70,36 @@ builder.Services.AddAuthentication(options =>
     {
         ValidateIssuer = true,
         ValidateAudience = true,
-        ValidAudience = confsJWT.ValidAudience,
-        ValidIssuer = confsJWT.ValidIssuer,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(confsJWT.Secret)),
+        ValidAudience = jwtAudience,
+        ValidIssuer = jwtIssuer,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecret)),
     };
 });
 
 builder.Services.AddAuthorization();
-
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new() { Title = "CadastroEmpresas API", Version = "v1" });
-    c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    c.SwaggerDoc("v1", new OpenApiInfo() { Title = "CadastroEmpresas API", Version = "v1" });
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Description = "JWT Authorization header usando o esquema Bearer. Exemplo: 'Bearer {token}'",
         Name = "Authorization",
-        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
-        Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+        BearerFormat = "JWT",
         Scheme = "Bearer"
     });
-    c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
-            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+            new OpenApiSecurityScheme
             {
-                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                Reference = new OpenApiReference
                 {
-                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                    Type = ReferenceType.SecurityScheme,
                     Id = "Bearer"
                 }
             },
@@ -76,19 +111,24 @@ builder.Services.AddSwaggerGen(c =>
 var connectionString = builder.Configuration.GetConnectionString("ApplicationDbConnection");
 if (string.IsNullOrEmpty(connectionString))
 {
-    throw new InvalidOperationException("A string de conex�o 'ApplicationDbConnection' n�o foi encontrada em appsettings.json.");
+    throw new InvalidOperationException("A string de conexão 'ApplicationDbConnection' não foi encontrada em appsettings.json.");
 }
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseMySql(builder.Configuration.GetConnectionString("ApplicationDbConnection"),
-    new MySqlServerVersion(new Version(8, 0, 25))));
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("ApplicationDbConnection"),
+        new MySqlServerVersion(new Version(8, 0, 25)),
+        mySqlOptions => mySqlOptions.EnableRetryOnFailure() // Habilita a resiliência
+    )
+);
 
 builder.Services.AddHttpClient();
 
-// Registre seus reposit�rios e servi�os para inje��o de depend�ncia
+// Registre seus repositórios e serviços para injeção de dependência
+builder.Services.AddScoped<PasswordHasherService>();
 builder.Services.AddScoped<EmpresaRepository>();
 builder.Services.AddScoped<EmpresaService>();
-builder.Services.AddScoped<UsuarioRepository>();
-builder.Services.AddScoped<UsuarioService>();
+builder.Services.AddScoped<AuthRepository>();
+builder.Services.AddScoped<AuthService>();
 
 var app = builder.Build();
 
@@ -101,19 +141,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors("CorsPolicy");
+
 app.UseAuthentication();
 
 app.UseAuthorization();
 
 app.MapControllers();
-
-///*app.MapGet("/", (TokenService service)
-//    => service.Generate(null));*/
-
-app.MapPost("/api/auth/token", (TokenService service) =>
-{
-    // Para testes, retorna um token sem validar usu�rio
-    return service.Generate(null);
-}).AllowAnonymous();
 
 app.Run();

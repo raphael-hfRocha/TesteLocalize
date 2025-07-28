@@ -4,20 +4,36 @@ import Axios from 'axios';
 Vue.use({
     install(Vue) {
         Vue.prototype.$http = Axios.create({
-            baseURL: 'http://localhost:3000',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
+            baseURL: 'https://localhost:7220',
+            timeout: 30000,
+            validateStatus: function (status) {
+                return status < 500;
             }
         })
 
         Vue.prototype.$http.interceptors.request.use(config => {
-            console.log(config.method)
+            const token = localStorage.getItem('authToken');
+            if (token) {
+                config.headers.Authorization = `Bearer ${token}`;
+            }
+            
+            console.log(`${config.method?.toUpperCase()} ${config.url}`, {
+                data: config.data,
+                params: config.params,
+                headers: config.headers
+            });
             return config
-        }, error => Promise.reject(error))
+        }, error => {
+            console.error('Request Error:', error)
+            return Promise.reject(error)
+        })
 
         Vue.prototype.$http.interceptors.response.use(res => {
+            console.log(`Response ${res.status}:`, res.data)
             return res
-        }, error => Promise.reject(error))
+        }, error => {
+            console.error('Response Error:', error)
+            return Promise.reject(error)
+        })
     }
 })

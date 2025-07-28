@@ -2,11 +2,67 @@
 <template>
   <div id="cadastro-usuarios">
     <h1>Cadastro de Usuários</h1>
-    
+    <div class="form">
+      <b-form @submit.prevent="cadastrarUsuario">
+        <b-form-group id="input-group-1">
+          <label for="nome">Nome:</label>
+          <b-form-input
+            id="input-1"
+            v-model="usuario.nome"
+            type="text"
+            placeholder="Digite seu nome"
+            required
+          ></b-form-input>
+        </b-form-group>
+
+        <b-form-group id="input-group-2">
+          <label for="email">E-mail:</label>
+          <b-form-input
+            id="input-2"
+            v-model="usuario.email"
+            placeholder="Digite seu e-mail"
+            type="email"
+            required
+          ></b-form-input>
+        </b-form-group>
+        <b-form-group id="input-group-3">
+          <label for="senha">Senha:</label>
+          <b-form-input
+            id="input-3"
+            v-model="usuario.senha"
+            type="password"
+            placeholder="Digite sua senha"
+            required
+          ></b-form-input>
+        </b-form-group>
+        <b-button
+          style="width: 180px; margin-right: 10px"
+          type="submit"
+          variant="primary"
+          >Enviar</b-button
+        >
+        <b-button
+          style="width: 180px; margin-left: 10px"
+          type="reset"
+          @click="limparCamposUsuario"
+          variant="danger"
+          >Limpar campos</b-button
+        >
+      </b-form>
+    </div>
   </div>
 </template>
 
 <script src="./index.js" lang="js"></script>
 
 <style scoped>
+.form {
+  max-width: 500px;
+  margin: auto;
+}
+.form label {
+  text-align: left;
+  display: block;
+  width: 100%;
+}
 </style>

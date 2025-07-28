@@ -40,6 +40,9 @@
               },
               "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Persistence\\Persistence\\Persistence.csproj": {
                 "projectPath": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Persistence\\Persistence\\Persistence.csproj"
+              },
+              "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Security\\Security\\Security.csproj": {
+                "projectPath": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Security\\Security\\Security.csproj"
               }
             }
           }
@@ -64,13 +67,19 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
             "Optivem.Framework.Infrastructure.FluentValidation": {
               "target": "Package",
               "version": "[1.0.16, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
-              "version": "[8.0.1, )"
+              "version": "[8.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -280,6 +289,9 @@
             "projectReferences": {
               "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Persistence\\Persistence\\Persistence.csproj": {
                 "projectPath": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Persistence\\Persistence\\Persistence.csproj"
+              },
+              "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Security\\Security\\Security.csproj": {
+                "projectPath": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Security\\Security\\Security.csproj"
               }
             }
           }

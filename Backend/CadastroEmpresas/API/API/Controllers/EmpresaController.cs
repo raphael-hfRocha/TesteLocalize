@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace CadastroEmpresas.src.API.Controllers
@@ -19,13 +20,6 @@ namespace CadastroEmpresas.src.API.Controllers
         public EmpresaController(EmpresaService empresaService)
         {
             _empresaService = empresaService;
-        }
-
-        [HttpGet("ReturnClass")]
-        public ActionResult<Empresa> ReturnClass()
-        {
-            Empresa empresa = new Empresa();
-            return Ok(empresa);
         }
 
         [HttpGet("{cnpj}")]
@@ -52,20 +46,19 @@ namespace CadastroEmpresas.src.API.Controllers
         }
 
         [HttpGet]
-        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<Empresa>> PesquisarEmpresaBanco(String cnpj)
         {
-            var vo = new Empresa 
-            { 
+            var vo = new Empresa
+            {
                 Cnpj = cnpj
             };
             try
             {
-                var resultado = await _empresaService.ObterDadosCnpjBanco(vo);
-                return Ok(resultado);
+                var result = await _empresaService.ObterDadosCnpjBanco(vo);
+                return Ok(result);
             }
             catch (Exception ex)
             {
@@ -79,13 +72,13 @@ namespace CadastroEmpresas.src.API.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ActionResult<Empresa> Post(String cnpj)
+        public ActionResult<Empresa> Post(Empresa vo)
         {
             var empresa = new Empresa
             {
                 NomeEmpresarial = "Nome Empresarial Exemplo",
                 NomeFantasia = "Nome Fantasia Exemplo",
-                Cnpj = cnpj,
+                Cnpj = vo.Cnpj,
                 Situacao = "Ativa",
                 Abertura = "2023-01-01",
                 Tipo = "Sociedade Limitada",
@@ -98,12 +91,34 @@ namespace CadastroEmpresas.src.API.Controllers
                 Municipio = "Cidade Exemplo",
                 Uf = "SP",
                 Cep = "12345-678",
-            };
+                Usuario = {
+                     IdUsuario = vo.Usuario.IdUsuario
+                },
+                IdUsuario = vo.Usuario.IdUsuario
+                };
 
             try
             {
-                var resultado = _empresaService.CadastrarEmpresa(empresa);
-                return Created($"/api/Empresa/{resultado.IdEmpresa}", resultado);
+                var result = _empresaService.CadastrarEmpresa(empresa);
+                return Created($"/api/Empresa/{result.IdEmpresa}", result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Erro ao cadastrar empresa: {ex.Message}");
+            }
+        }
+
+        [HttpGet("SearchEmpresasUsuario")]
+        [Authorize]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult> ObterMinhasEmpresas(Int32 idUsuario)
+        {
+            try
+            {
+                var empresas = await _empresaService.ObterEmpresasPorUsuario(idUsuario);
+                return Ok(empresas);
             }
             catch (Exception ex)
             {

@@ -1,6 +1,6 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
-import Usuario from '@/pages/Usuario/index.vue'
+import Usuario from '@/pages/Empresa/index.vue'
 import BootstrapVue from 'bootstrap-vue'
 
 const localVue = createLocalVue()

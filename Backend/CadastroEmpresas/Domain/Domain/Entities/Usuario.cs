@@ -10,11 +10,13 @@ namespace CadastroEmpresas.src.Domain.Entities
         private String _nome;
         private String _email;
         private String _senha;
+        private ICollection<Empresa> _empresas;
 
         public Int32 IdUsuario { get => getIdUsuario(); set => setIdUsuario(value); }
         public String Nome { get => getNome(); set => setNome(value); }
         public String Email { get => getEmail(); set => setEmail(value); }
         public String Senha { get => getSenha(); set => setSenha(value); }
+        public ICollection<Empresa> Empresas { get => getEmpresas(); set => _empresas = value; }
 
         private Int32 getIdUsuario()
         {
@@ -47,6 +49,14 @@ namespace CadastroEmpresas.src.Domain.Entities
         private void setSenha(String valor)
         {
             _senha = valor;
+        }
+        private ICollection<Empresa> getEmpresas()
+        {
+            if (this._empresas == null)
+            {
+                this._empresas = new List<Empresa>();
+            }
+            return this._empresas;
         }
     }
 }

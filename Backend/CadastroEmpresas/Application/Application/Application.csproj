@@ -14,8 +14,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\Domain\Domain.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Infrastructure\Infrastructure.csproj" />
-    <!-- Remova ou comente a linha abaixo para quebrar o ciclo -->
-    <!-- <ProjectReference Include="..\..\Infrastructure\Infrastructure\Infrastructure.csproj" /> -->
     <ProjectReference Include="..\..\Security\Security\Security.csproj" />
   </ItemGroup>
 

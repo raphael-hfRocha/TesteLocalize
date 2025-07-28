@@ -1,4 +1,5 @@
 ﻿using CadastroEmpresas.Domain.Entities;
+using CadastroEmpresas.src.Domain.Entities;
 using Infrastructure.Repositories; // Certifique-se de que o projeto ou biblioteca "Infrastructure" está referenciado corretamente.
 using Microsoft.Extensions.DependencyInjection;
 using MySql.Data.MySqlClient;
@@ -38,6 +39,12 @@ namespace Application.Services
             {
                 PropertyNameCaseInsensitive = true
             });
+            
+            if (empresa == null)
+            {
+                throw new Exception("Não foi possível deserializar os dados da empresa da API.");
+            }
+            
             return empresa;
         }
 
@@ -53,7 +60,7 @@ namespace Application.Services
             return retorno;
         }
 
-        public async Task<Empresa> ObterDadosCnpjBanco(Empresa empresa)
+        public async Task<Empresa?> ObterDadosCnpjBanco(Empresa empresa)
         {
             if (empresa.Cnpj == null)
             {
@@ -63,6 +70,26 @@ namespace Application.Services
             var retorno = await _empresaRepository.ObterDadosCnpjBanco(empresa);
 
             return retorno;
+        }
+
+        public async Task<List<Empresa>> ObterEmpresasPorUsuario(Int32 idUsuario)
+        {
+            if (idUsuario <= 0)
+            {
+                throw new ArgumentException("ID do usuário deve ser maior que zero.", nameof(idUsuario));
+            }
+
+            return await _empresaRepository.ObterEmpresasPorUsuario(idUsuario);
+        }
+
+        public async Task<int> ContarEmpresasTotal()
+        {
+            return await _empresaRepository.ContarEmpresasTotal();
+        }
+
+        public async Task<List<Empresa>> ObterTodasEmpresas()
+        {
+            return await _empresaRepository.ObterTodasEmpresas();
         }
     }
 }

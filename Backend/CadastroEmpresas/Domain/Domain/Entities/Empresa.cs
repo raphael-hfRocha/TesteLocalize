@@ -1,6 +1,7 @@
 ﻿using CadastroEmpresas.src.Domain.Entities;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Security.Cryptography;
 
 namespace CadastroEmpresas.Domain.Entities
 {
@@ -22,6 +23,8 @@ namespace CadastroEmpresas.Domain.Entities
         private String _municipio;
         private String _uf;
         private String _cep;
+        private Usuario _usuario;
+        private Int32 _idUsuario;
 
         public Int32 IdEmpresa { get => getIdEmpresa(); set => setIdEmpresa(value); }
         public String NomeEmpresarial { get => getNomeEmpresarial(); set => setNomeEmpresarial(value); }
@@ -39,6 +42,8 @@ namespace CadastroEmpresas.Domain.Entities
         public String Municipio { get => getMunicipio(); set => setMunicipio(value); }
         public String Uf { get => getUf(); set => setUf(value); }
         public String Cep { get => getCep(); set => setCep(value); }
+        public Usuario Usuario { get => getUsuario(); set => setUsuario(value); }
+        public Int32 IdUsuario { get => getIdUsuario(); set => setIdUsuario(value); }
 
         private Int32 getIdEmpresa()
         {
@@ -167,6 +172,22 @@ namespace CadastroEmpresas.Domain.Entities
         private void setCep(String valor)
         {
             _cep = valor;
+        }
+        private Usuario getUsuario()
+        {
+            return _usuario;
+        }
+        private void setUsuario(Usuario valor)
+        {
+            _usuario = valor;
+        }
+        private Int32 getIdUsuario()
+        {
+            return _idUsuario;
+        }
+        private void setIdUsuario(Int32 valor)
+        {
+            _idUsuario = valor;
         }
     }
 }

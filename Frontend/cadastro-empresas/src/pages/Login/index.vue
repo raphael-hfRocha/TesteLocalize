@@ -1,25 +1,52 @@
 <template>
   <div id="login" v-if="$route.path === '/login'">
-    <h2>🔐 Página de Login</h2>
-    <p>Você está na página de login!</p>
-    <div
-      style="
-        border: 2px solid #007bff;
-        padding: 20px;
-        margin: 20px;
-        border-radius: 8px;
-      "
-    >
-      <p>
-        <strong>Debug:</strong> Se você está vendo isso, o roteamento está
-        funcionando!
-      </p>
+    <h1>Login</h1>
+    <div class="form">
+      <b-form @submit.prevent="fazerLogin">
+        <b-form-group id="input-group-1">
+          <label for="email">E-mail:</label>
+          <b-form-input
+            id="input-1"
+            v-model="usuario.email"
+            type="email"
+            placeholder="Digite seu e-mail"
+            required
+          ></b-form-input>
+        </b-form-group>
+
+        <b-form-group id="input-group-2">
+          <label for="senha">Senha:</label>
+          <b-form-input
+            id="input-2"
+            v-model="usuario.senha"
+            type="password"
+            placeholder="Digite sua senha"
+            required
+          ></b-form-input>
+        </b-form-group>
+        <b-button style="width: 180px; margin-right: 10px;" type="submit" variant="primary">Login</b-button>
+        <b-button style="width: 180px; margin-left: 10px;" type="button" variant="danger" @click="limparCampos">Limpar campos</b-button>
+      </b-form>
     </div>
-    <p><strong>Rota atual:</strong> {{ $route.path }}</p>
   </div>
 </template>
 
 <script src="./index.js" lang="js"></script>
 
 <style scoped>
+#login {
+  margin: 20px;
+}
+.form {
+  max-width: 500px;
+  margin: auto;
+}
+.form label {
+  text-align: left;
+  display: block;
+  width: 100%;
+}
+.form b-button {
+  width: 500px;
+}
 </style>

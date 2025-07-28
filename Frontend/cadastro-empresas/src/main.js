@@ -2,10 +2,13 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import VueTheMask from 'vue-the-mask'
 import './plugins/axios'
 import './plugins/bootstrap-vue'
 
 Vue.config.productionTip = false
+
+Vue.use(VueTheMask)
 
 new Vue({
   router,
