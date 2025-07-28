@@ -1,6 +1,6 @@
 ﻿using CadastroEmpresas.Domain.Entities;
 using CadastroEmpresas.src.Domain.Entities;
-using Infrastructure.Repositories; // Certifique-se de que o projeto ou biblioteca "Infrastructure" está referenciado corretamente.
+using Infrastructure.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 using MySql.Data.MySqlClient;
 using System;
