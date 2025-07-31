@@ -40,5 +40,33 @@ namespace Security.PasswordHasher
                 return Convert.ToBase64String(hashComSalt);
             }
         }
+
+        public bool VerifyPassword(string senha, string hashComSaltBase64)
+        {
+            byte[] hashComSalt = Convert.FromBase64String(hashComSaltBase64);
+
+            int saltLength = 32;
+            if (hashComSalt.Length < saltLength)
+                return false;
+
+            byte[] salt = new byte[saltLength];
+            Array.Copy(hashComSalt, 0, salt, 0, saltLength);
+
+            int hashLength = hashComSalt.Length - saltLength;
+            byte[] hashArmazenado = new byte[hashLength];
+            Array.Copy(hashComSalt, saltLength, hashArmazenado, 0, hashLength);
+
+            byte[] senhaBytes = Encoding.UTF8.GetBytes(senha);
+            byte[] senhaComSalt = new byte[senhaBytes.Length + salt.Length];
+            Array.Copy(senhaBytes, 0, senhaComSalt, 0, senhaBytes.Length);
+            Array.Copy(salt, 0, senhaComSalt, senhaBytes.Length, salt.Length);
+
+            using (var sha256 = SHA256.Create())
+            {
+                byte[] hashInformado = sha256.ComputeHash(senhaComSalt);
+
+                return hashInformado.SequenceEqual(hashArmazenado);
+            }
+        }
     }
 }

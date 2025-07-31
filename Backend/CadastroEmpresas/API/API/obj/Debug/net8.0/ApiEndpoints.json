@@ -348,55 +348,6 @@
   },
   {
     "ContainingType": "CadastroEmpresas.src.API.Controllers.EmpresaController",
-    "Method": "Post",
-    "RelativePath": "api/Empresa",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "vo",
-        "Type": "CadastroEmpresas.Domain.Entities.Empresa",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "CadastroEmpresas.Domain.Entities.Empresa",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 201
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 400
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 401
-      },
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 500
-      }
-    ]
-  },
-  {
-    "ContainingType": "CadastroEmpresas.src.API.Controllers.EmpresaController",
     "Method": "PesquisarEmpresaReceitaWs",
     "RelativePath": "api/Empresa/{cnpj}",
     "HttpMethod": "GET",
@@ -432,46 +383,6 @@
         "Type": "System.Void",
         "MediaTypes": [],
         "StatusCode": 500
-      }
-    ]
-  },
-  {
-    "ContainingType": "CadastroEmpresas.src.API.Controllers.EmpresaController",
-    "Method": "ObterMinhasEmpresas",
-    "RelativePath": "api/Empresa/SearchEmpresasUsuario",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "idUsuario",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 401
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 404
       }
     ]
   }

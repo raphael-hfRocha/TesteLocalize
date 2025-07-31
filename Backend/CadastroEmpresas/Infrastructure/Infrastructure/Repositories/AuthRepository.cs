@@ -31,6 +31,12 @@ namespace Infrastructure.Repositories
                 return null;
             }
 
+            bool senhaValida = _passwordHasher.VerifyPassword(usuario.Senha, usuarioEncontrado.Senha);
+            if (!senhaValida)
+            {
+                return null;
+            }
+
             return usuarioEncontrado;
         }
 

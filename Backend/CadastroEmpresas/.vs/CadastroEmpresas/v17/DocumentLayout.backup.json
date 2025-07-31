@@ -1,0 +1,83 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{701D9542-DAC9-4681-8E0B-462A5A919480}|Infrastructure\\Infrastructure\\Infrastructure.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\infrastructure\\infrastructure\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701D9542-DAC9-4681-8E0B-462A5A919480}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBEEC1AB-BE90-4B9E-89E4-F233411015B4}|Security\\Security\\Security.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\security\\security\\passwordhasher\\passwordhasherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBEEC1AB-BE90-4B9E-89E4-F233411015B4}|Security\\Security\\Security.csproj|solutionrelative:security\\security\\passwordhasher\\passwordhasherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{701D9542-DAC9-4681-8E0B-462A5A919480}|Infrastructure\\Infrastructure\\Infrastructure.csproj|c:\\.net\\projetos\\testelocalize\\backend\\cadastroempresas\\infrastructure\\infrastructure\\repositories\\empresarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{701D9542-DAC9-4681-8E0B-462A5A919480}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\repositories\\empresarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 307,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PasswordHasherService.cs",
+              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Security\\Security\\PasswordHasher\\PasswordHasherService.cs",
+              "RelativeDocumentMoniker": "Security\\Security\\PasswordHasher\\PasswordHasherService.cs",
+              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Security\\Security\\PasswordHasher\\PasswordHasherService.cs",
+              "RelativeToolTip": "Security\\Security\\PasswordHasher\\PasswordHasherService.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAAD0AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T00:42:12.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthRepository.cs",
+              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Infrastructure\\Infrastructure\\Repositories\\AuthRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Repositories\\AuthRepository.cs",
+              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Infrastructure\\Infrastructure\\Repositories\\AuthRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Infrastructure\\Repositories\\AuthRepository.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T00:39:50.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmpresaRepository.cs",
+              "DocumentMoniker": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Infrastructure\\Infrastructure\\Repositories\\EmpresaRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Repositories\\EmpresaRepository.cs",
+              "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\Infrastructure\\Infrastructure\\Repositories\\EmpresaRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Infrastructure\\Repositories\\EmpresaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T00:39:47.726Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
