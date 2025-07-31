@@ -54,7 +54,7 @@
 
       <div v-else>
         <b-table
-          :items="items"
+          :items="empresas"
           :fields="header"
           striped
           hover

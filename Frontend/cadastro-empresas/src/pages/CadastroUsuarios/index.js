@@ -21,7 +21,7 @@ export default {
             await this.$http.post(`api/${this.controller}/cadastro`, this.usuario)
                 .then((response) => {
                     this.usuario = response.data;
-                    this.$router.push({ name: 'usuario' });
+                    this.$router.push({ name: 'login' });
                 }).catch((error) => {
                     console.error('Erro ao cadastrar usuário:', error);
                     this.$router.push({ name: 'cadastroUsuario' });

@@ -1,5 +1,8 @@
 <template>
   <div id="login" v-if="$route.path === '/login'">
+    <b-modal v-show="error === true" id="modal-1" title="Erro">
+      <strong class="my-4">Erro ao realizar login</strong>
+    </b-modal>
     <h1>Login</h1>
     <div class="form">
       <b-form @submit.prevent="fazerLogin">
@@ -24,8 +27,20 @@
             required
           ></b-form-input>
         </b-form-group>
-        <b-button style="width: 180px; margin-right: 10px;" type="submit" variant="primary">Login</b-button>
-        <b-button style="width: 180px; margin-left: 10px;" type="button" variant="danger" @click="limparCampos">Limpar campos</b-button>
+        <b-button
+          v-b-modal.modal-1
+          style="width: 180px; margin-right: 10px"
+          type="submit"
+          variant="primary"
+          >Login</b-button
+        >
+        <b-button
+          style="width: 180px; margin-left: 10px"
+          type="button"
+          variant="danger"
+          @click="limparCampos"
+          >Limpar campos</b-button
+        >
       </b-form>
     </div>
   </div>

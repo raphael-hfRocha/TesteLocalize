@@ -32,7 +32,6 @@ export default new Vuex.Store({
             },
             idUsuario: null
         },
-        empresas: [],
         usuario: {
             idUsuario: null,
             nome: '',
@@ -40,20 +39,18 @@ export default new Vuex.Store({
             senha: '',
             token: null,
             isLoggedIn: false
-        }
+        },
+        empresas: []
     },
     getters: {
         getEmpresa: state => state.empresa,
-        getEmpresas: state => state.empresas,
         getUsuario: state => state.usuario,
-        isAuthenticated: state => state.usuario.isLoggedIn && state.usuario.token
+        isAuthenticated: state => state.usuario.isLoggedIn && state.usuario.token,
+        getEmpresas: state => state.empresas
     },
     mutations: {
         setEmpresa(state, empresa) {
             state.empresa = empresa;
-        },
-        setEmpresas(state, empresas) {
-            state.empresas = empresas;
         },
         setUsuario(state, usuario) {
             state.usuario = { ...state.usuario, ...usuario };
@@ -71,6 +68,9 @@ export default new Vuex.Store({
                 isLoggedIn: false
             };
             localStorage.removeItem('authToken');
+        },
+        setEmpresas(state, empresas) {
+            state.empresas = empresas;
         }
     },
 })

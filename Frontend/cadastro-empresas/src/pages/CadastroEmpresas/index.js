@@ -11,9 +11,29 @@ export default {
         }
     },
     methods: {
+        async puxarUsuarioLogado() {
+            await this.$http.get(`api/${this.controllerAuth}/me`)
+            .then((response) => {
+                this.usuario = response.data;
+                console.log("Usuário logado:", this.usuario);
+            }).catch((error) => {
+                console.error('Erro ao puxar usuário logado:', error);
+            })
+        },
+        async logout() {
+            this.usuario.idUsuario = null,
+                this.usuario.nome = '',
+                this.usuario.email = '',
+                this.usuario.senha = '',
+                this.usuario.token = null,
+                this.usuario.isLoggedIn = false
+            this.$router.push({ name: 'home' });
+        },
         async verificaUsuarioLogado() {
+            await this.puxarUsuarioLogado();
             if (this.usuario.idUsuario === null || this.usuario.idUsuario === undefined || this.usuario.idUsuario <= 0) {
-                this.$router.push({ name: 'home' });
+                await this.limparDadosEmpresa();
+                await this.logout()
             }
         },
         async cadastrarEmpresa() {

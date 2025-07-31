@@ -5,7 +5,7 @@ Vue.use({
     install(Vue) {
         Vue.prototype.$http = Axios.create({
             baseURL: 'https://localhost:7220',
-            timeout: 30000,
+            // timeout: 30000,
             validateStatus: function (status) {
                 return status < 500;
             }

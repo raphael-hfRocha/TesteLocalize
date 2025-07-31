@@ -39,4 +39,6 @@ const router = new Router({
     ]
 })
 
+router.beforeEach
+
 export default router;

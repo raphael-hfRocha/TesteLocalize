@@ -6,7 +6,8 @@ export default {
     name: 'login',
     data() {
         return {
-            controller: 'Auth'
+            controller: 'Auth',
+            error: false
         }
     },
     methods: {
@@ -33,6 +34,7 @@ export default {
                     this.$router.push({ name: 'empresa' });
                 }
             }).catch((error) => {
+                this.error = true;
                 console.error('Erro ao fazer login:', error);
             });
         },
