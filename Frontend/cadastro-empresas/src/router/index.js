@@ -39,6 +39,21 @@ const router = new Router({
     ]
 })
 
-router.beforeEach
+router.beforeEach((to, from, next) => {
+    const isAuthenticated = localStorage.getItem('authToken');
+
+    if (to.name === 'empresa' || to.name === 'cadastroEmpresa') {
+        if (isAuthenticated === null) {
+            next({ name: 'login' });
+            next();
+            next();
+        }
+    }
+    if (to.name === 'login' && isAuthenticated) {
+        next({ name: 'empresa' });
+    } else {
+        next();
+    }
+});
 
 export default router;

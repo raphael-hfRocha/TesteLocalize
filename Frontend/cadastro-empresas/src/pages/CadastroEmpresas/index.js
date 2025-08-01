@@ -1,7 +1,7 @@
 export default {
     async created() {
-        await this.limparDadosEmpresa();
         await this.verificaUsuarioLogado();
+        console.log("Usuário verificado:", this.usuario);
     },
     name: 'CadastroEmpresas',
     data() {
@@ -11,30 +11,44 @@ export default {
         }
     },
     methods: {
+        async returnClassEmpresa() {
+            this.$http.get(`api/${this.controller}/ReturnClass`)
+                .then((response) => {
+                    this.empresa = response.data;
+                    console.log("Return class Empresa: ", this.empresa);
+                }).catch((error) => {
+                    console.error('Erro ao retornar classe Empresa:', error);
+                })
+        },
+        async returnClassUsuario() {
+            this.$http.get(`api/${this.controllerAuth}/ReturnClass`)
+                .then((response) => {
+                    this.usuario = response.data;
+                    console.log("Return class Usuário: ", this.usuario);
+                }).catch((error) => {
+                    console.error('Erro ao retornar classe Usuário:', error);
+                })
+        },
         async puxarUsuarioLogado() {
             await this.$http.get(`api/${this.controllerAuth}/me`)
-            .then((response) => {
-                this.usuario = response.data;
-                console.log("Usuário logado:", this.usuario);
-            }).catch((error) => {
-                console.error('Erro ao puxar usuário logado:', error);
-            })
+                .then((response) => {
+                    this.usuario = response.data;
+                    console.log("Usuário logado:", this.usuario);
+                }).catch((error) => {
+                    console.error('Erro ao puxar usuário logado:', error);
+                })
         },
         async logout() {
-            this.usuario.idUsuario = null,
-                this.usuario.nome = '',
-                this.usuario.email = '',
-                this.usuario.senha = '',
-                this.usuario.token = null,
-                this.usuario.isLoggedIn = false
-            this.$router.push({ name: 'home' });
+            this.limparDadosUsuario();
+            localStorage.removeItem('authToken');
+            this.$router.push({ name: 'login' });
         },
         async verificaUsuarioLogado() {
-            await this.puxarUsuarioLogado();
-            if (this.usuario.idUsuario === null || this.usuario.idUsuario === undefined || this.usuario.idUsuario <= 0) {
-                await this.limparDadosEmpresa();
+            if (this.usuario.idUsuario === null) {
+                this.limparDadosEmpresa();
                 await this.logout()
             }
+            await this.puxarUsuarioLogado();
         },
         async cadastrarEmpresa() {
             const empresaData = {
@@ -53,7 +67,7 @@ export default {
                 municipio: this.empresa.municipio || 'Cidade Exemplo',
                 uf: this.empresa.uf || 'SP',
                 cep: this.empresa.cep || '12345-678',
-                idUsuario: this.usuario.idUsuario || null
+                idUsuario: this.usuario.idUsuario
             };
 
             await this.$http
@@ -70,7 +84,7 @@ export default {
                 })
         },
     },
-    async limparDadosEmpresa() {
+    limparDadosEmpresa() {
         this.empresa.idEmpresa = null
         this.empresa.nomeEmpresarial = '',
             this.empresa.nomeFantasia = '',
@@ -86,7 +100,12 @@ export default {
             this.empresa.bairro = '',
             this.empresa.municipio = '',
             this.empresa.uf = '',
-            this.empresa.cep = ''
+            this.empresa.cep = '';
+            this.empresa.usuario.idUsuario = null;
+            this.empresa.usuario.nome = '';
+            this.empresa.usuario.email = '';
+            this.empresa.usuario.senha = '';
+            this.empresa.idUsuario = null;
     },
     computed: {
         usuario: {

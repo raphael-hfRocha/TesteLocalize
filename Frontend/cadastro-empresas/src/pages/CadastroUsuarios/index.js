@@ -1,22 +1,36 @@
 /* eslint-disable */
-import { BTable, BTableSimple } from 'bootstrap-vue'
-
 export default {
     async created() {
+        await this.returnClassUsuario();
+        await this.returnClassEmpresa();
         await this.limparCamposUsuario();
         this.usuario.isLoggedIn = false;
     },
     name: 'CadastroUsuarios',
-    components: {
-        BTable,
-        BTableSimple
-    },
     data() {
         return {
             controller: 'Auth',
         }
     },
     methods: {
+        async returnClassEmpresa() {
+            this.$http.get(`api/${this.controller}/ReturnClass`)
+                .then((response) => {
+                    this.empresa = response.data;
+                    console.log("Return class Empresa: ", this.empresa);
+                }).catch((error) => {
+                    console.error('Erro ao retornar classe Empresa:', error);
+                })
+        },
+        async returnClassUsuario() {
+            this.$http.get(`api/${this.controllerAuth}/ReturnClass`)
+                .then((response) => {
+                    this.usuario = response.data;
+                    console.log("Return class Usuário: ", this.usuario);
+                }).catch((error) => {
+                    console.error('Erro ao retornar classe Usuário:', error);
+                })
+        },
         async cadastrarUsuario() {
             await this.$http.post(`api/${this.controller}/cadastro`, this.usuario)
                 .then((response) => {

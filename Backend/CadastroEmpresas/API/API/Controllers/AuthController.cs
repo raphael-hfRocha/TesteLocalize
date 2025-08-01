@@ -15,6 +15,7 @@ using System.Linq;
 using Security.PasswordHasher;
 using CadastroEmpresas.Domain.Entities;
 using API.DTOs;
+using System.Collections.Generic;
 
 namespace API.Controllers
 {
@@ -68,6 +69,20 @@ namespace API.Controllers
             _empresaService = empresaService;
         }
 
+        [HttpGet("ReturnClass")]
+        [ProducesResponseType(typeof(UsuarioReturnClassDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public Usuario ReturnClass()
+        {
+            return new Usuario
+            {
+                IdUsuario = 0,
+                Nome = "",
+                Email = "",
+                Senha = ""
+            };
+        }
         /// <summary>
         /// Endpoint para login de usuários
         /// </summary>
@@ -541,7 +556,8 @@ namespace API.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult> ObterMinhasEmpresas()
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<List<EmpresaDto>>> ObterMinhasEmpresas()
         {
             try
             {
@@ -558,8 +574,17 @@ namespace API.Controllers
                 }
 
                 var empresas = await _empresaService.ObterEmpresasPorUsuario(usuario.IdUsuario);
-
                 return Ok(empresas);
+            }
+            catch (InvalidCastException ex)
+            {
+                return StatusCode(500, new
+                {
+                    Mensagem = "Erro de conversão de tipos no banco de dados.",
+                    Detalhes = ex.Message,
+                    TipoErro = "InvalidCastException",
+                    Sugestao = "Verifique os tipos das colunas no banco de dados."
+                });
             }
             catch (Exception ex)
             {
@@ -569,51 +594,6 @@ namespace API.Controllers
                     Detalhes = ex.Message,
                     StackTrace = ex.StackTrace,
                     InnerException = ex.InnerException?.Message
-                });
-            }
-        }
-
-        /// <summary>
-        /// Endpoint de debug para testar conexão com banco
-        /// </summary>
-        [HttpGet("debug-empresas")]
-        [Authorize]
-        public async Task<ActionResult> DebugEmpresas()
-        {
-            try
-            {
-                var email = User.Identity?.Name;
-                if (string.IsNullOrEmpty(email))
-                {
-                    return Unauthorized(new { Mensagem = "Token inválido." });
-                }
-
-                var usuario = await _usuarioService.ObterUsuarioPorEmail(email);
-                if (usuario == null)
-                {
-                    return NotFound(new { Mensagem = "Usuário não encontrado." });
-                }
-
-                // Debug: tentar contar empresas
-                var totalEmpresas = await _empresaService.ObterEmpresasPorUsuario(usuario.IdUsuario);
-
-                return Ok(new
-                {
-                    Usuario = new { usuario.IdUsuario, usuario.Nome, usuario.Email },
-                    TotalEmpresas = totalEmpresas?.Count ?? 0,
-                    Empresas = totalEmpresas,
-                    Debug = "Endpoint funcionando corretamente"
-                });
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, new
-                {
-                    Mensagem = "Erro interno do servidor.",
-                    Detalhes = ex.Message,
-                    StackTrace = ex.StackTrace,
-                    InnerException = ex.InnerException?.Message,
-                    TipoErro = ex.GetType().Name
                 });
             }
         }

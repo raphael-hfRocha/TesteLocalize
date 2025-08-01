@@ -1,6 +1,5 @@
 <template>
-  <div id="cadastro-empresas">
-    Id do usuario: {{ usuario.idUsuario }}
+  <div>
     <h1>Cadastro de Empresas</h1>
     <div class="form">
       <b-form @submit.prevent="cadastrarEmpresa">

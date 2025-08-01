@@ -19,26 +19,25 @@ public class ApplicationDbContext : DbContext
             entity.ToTable("EMPRESA");
             entity.HasKey(e => e.IdEmpresa);
             entity.Property(e => e.IdEmpresa).HasColumnName("EMPRESA_ID");
-            entity.Property(e => e.NomeEmpresarial).HasColumnName("EMPRESA_NOME_EMPRESARIAL").HasMaxLength(40);
-            entity.Property(e => e.NomeFantasia).HasColumnName("EMPRESA_NOME_FANTASIA").HasMaxLength(40);
-            entity.Property(e => e.Cnpj).HasColumnName("EMPRESA_CNPJ").HasMaxLength(18);
-            entity.Property(e => e.Situacao).HasColumnName("EMPRESA_SITUACAO").HasMaxLength(40);
-            entity.Property(e => e.Abertura).HasColumnName("EMPRESA_ABERTURA").HasMaxLength(8);
-            entity.Property(e => e.Tipo).HasColumnName("EMPRESA_TIPO").HasMaxLength(20);
-            entity.Property(e => e.NaturezaJuridica).HasColumnName("EMPRESA_NATUREZA_JURIDICA").HasMaxLength(255);
-            entity.Property(e => e.AtividadePrincipal).HasColumnName("EMPRESA_ATIVIDADE_PRINCIPAL").HasMaxLength(100);
-            entity.Property(e => e.Logradouro).HasColumnName("EMPRESA_LOGRADOURO").HasMaxLength(100);
-            entity.Property(e => e.Numero).HasColumnName("EMPRESA_NUMERO");
-            entity.Property(e => e.Complemento).HasColumnName("EMPRESA_COMPLEMENTO").HasMaxLength(250);
-            entity.Property(e => e.Bairro).HasColumnName("EMPRESA_BAIRRO").HasMaxLength(40);
-            entity.Property(e => e.Municipio).HasColumnName("EMPRESA_MUNICIPIO").HasMaxLength(40);
-            entity.Property(e => e.Uf).HasColumnName("EMPRESA_UF").HasMaxLength(2);
-            entity.Property(e => e.Cep).HasColumnName("EMPRESA_CEP").HasMaxLength(8);
+            entity.Property(e => e.NomeEmpresarial).HasColumnName("EMPRESA_NOME_EMPRESARIAL").HasMaxLength(40).HasConversion<string>();
+            entity.Property(e => e.NomeFantasia).HasColumnName("EMPRESA_NOME_FANTASIA").HasMaxLength(40).HasConversion<string>();
+            entity.Property(e => e.Cnpj).HasColumnName("EMPRESA_CNPJ").HasMaxLength(18).HasConversion<string>();
+            entity.Property(e => e.Situacao).HasColumnName("EMPRESA_SITUACAO").HasMaxLength(40).HasConversion<string>();
+            entity.Property(e => e.Abertura).HasColumnName("EMPRESA_ABERTURA").HasMaxLength(8).HasConversion<string>();
+            entity.Property(e => e.Tipo).HasColumnName("EMPRESA_TIPO").HasMaxLength(20).HasConversion<string>();
+            entity.Property(e => e.NaturezaJuridica).HasColumnName("EMPRESA_NATUREZA_JURIDICA").HasMaxLength(255).HasConversion<string>();
+            entity.Property(e => e.AtividadePrincipal).HasColumnName("EMPRESA_ATIVIDADE_PRINCIPAL").HasMaxLength(100).HasConversion<string>();
+            entity.Property(e => e.Logradouro).HasColumnName("EMPRESA_LOGRADOURO").HasMaxLength(100).HasConversion<string>();
+            entity.Property(e => e.Numero).HasColumnName("EMPRESA_NUMERO").HasMaxLength(20).HasConversion<string>();
+            entity.Property(e => e.Complemento).HasColumnName("EMPRESA_COMPLEMENTO").HasMaxLength(250).HasConversion<string>();
+            entity.Property(e => e.Bairro).HasColumnName("EMPRESA_BAIRRO").HasMaxLength(40).HasConversion<string>();
+            entity.Property(e => e.Municipio).HasColumnName("EMPRESA_MUNICIPIO").HasMaxLength(40).HasConversion<string>();
+            entity.Property(e => e.Uf).HasColumnName("EMPRESA_UF").HasMaxLength(2).HasConversion<string>();
+            entity.Property(e => e.Cep).HasColumnName("EMPRESA_CEP").HasMaxLength(8).HasConversion<string>();
             entity.Property(e => e.IdUsuario).HasColumnName("USUARIO_ID");
-            entity.HasOne(e => e.Usuario)
-                  .WithMany(u => u.Empresas)
-                  .HasForeignKey(e => e.IdUsuario)
-                  .OnDelete(DeleteBehavior.Cascade);
+             entity.HasOne(e => e.Usuario)
+                   .WithMany(u => u.Empresas)
+                   .HasForeignKey(e => e.IdUsuario);
         });
 
         modelBuilder.Entity<Usuario>(entity =>
@@ -46,9 +45,9 @@ public class ApplicationDbContext : DbContext
             entity.ToTable("USUARIO");
             entity.HasKey(u => u.IdUsuario);
             entity.Property(u => u.IdUsuario).HasColumnName("USUARIO_ID");
-            entity.Property(u => u.Nome).HasColumnName("USUARIO_NOME").HasMaxLength(100);
-            entity.Property(u => u.Email).HasColumnName("USUARIO_EMAIL").HasMaxLength(50);
-            entity.Property(u => u.Senha).HasColumnName("USUARIO_SENHA").HasMaxLength(255); // Aumentado para 255 para suportar hash
+            entity.Property(u => u.Nome).HasColumnName("USUARIO_NOME").HasMaxLength(100).HasConversion<string>();
+            entity.Property(u => u.Email).HasColumnName("USUARIO_EMAIL").HasMaxLength(50).HasConversion<string>();
+            entity.Property(u => u.Senha).HasColumnName("USUARIO_SENHA").HasMaxLength(255).HasConversion<string>(); // Aumentado para 255 para suportar hash
         });
         
 

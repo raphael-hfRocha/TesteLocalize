@@ -1,6 +1,6 @@
 <template>
   <div id="usuario">
-    <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="d-flex justify-content-between align-empresas-center mb-4">
       <h2>Página de Empresas</h2>
       <div>
         <b-button
@@ -37,7 +37,7 @@
 
     <!-- Tabela de empresas -->
     <div class="tabela-empresas" v-else>
-      <div v-if="items.length === 0" class="text-center">
+      <div v-if="empresas.length === 0" class="text-center">
         <b-card>
           <b-card-text>
             <h5>Nenhuma empresa cadastrada</h5>
@@ -75,22 +75,11 @@
           <template #cell(nomeFantasia)="data">
             {{ data.value || "Não informado" }}
           </template>
-
-          <template #cell(actions)="data">
-            <b-button-group size="sm">
-              <b-button variant="outline-primary" @click="editarEmpresa(data.item)">
-                <b-icon icon="pencil"></b-icon>
-              </b-button>
-              <b-button variant="outline-danger" @click="excluirEmpresa(data.item)">
-                <b-icon icon="trash"></b-icon>
-              </b-button>
-            </b-button-group>
-          </template>
         </b-table>
 
-        <div class="d-flex justify-content-between align-items-center mt-3">
+        <div class="d-flex justify-content-between align-empresas-center mt-3">
           <small class="text-muted">
-            Total: {{ items.length }} empresa{{ items.length !== 1 ? 's' : '' }}
+            Total: {{ empresas.length }} empresa{{ empresas.length !== 1 ? 's' : '' }}
           </small>
         </div>
       </div>

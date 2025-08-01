@@ -52,11 +52,7 @@ namespace CadastroEmpresas.src.Domain.Entities
         }
         private ICollection<Empresa> getEmpresas()
         {
-            if (this._empresas == null)
-            {
-                this._empresas = new List<Empresa>();
-            }
-            return this._empresas;
+            return this._empresas ?? new List<Empresa>();
         }
     }
 }

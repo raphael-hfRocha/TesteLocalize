@@ -22,7 +22,7 @@ namespace Infrastructure.Repositories
             return result;
         }
 
-        public Empresa CadastrarEmpresa(Empresa empresa) 
+        public Empresa CadastrarEmpresa(Empresa empresa)
         {
             _applicationDbContext.Empresas.Add(empresa);
             _applicationDbContext.SaveChanges();
@@ -34,10 +34,20 @@ namespace Infrastructure.Repositories
             return _applicationDbContext.Empresas.ToList();
         }
 
-        public async Task<List<Empresa>> ObterEmpresasPorUsuario(int idUsuario)
+        public async Task<List<Empresa>> ObterEmpresasPorUsuario(Int32 idUsuario)
         {
             return await _applicationDbContext.Empresas
                 .Where(e => e.IdUsuario == idUsuario)
+                .Select(e => new Empresa
+                {
+                    IdEmpresa = e.IdEmpresa,
+                    NomeEmpresarial = e.NomeEmpresarial,
+                    NomeFantasia = e.NomeFantasia,
+                    Cnpj = e.Cnpj,
+                    Situacao = e.Situacao,
+                    IdUsuario = e.IdUsuario
+                })
+                .AsNoTracking()
                 .ToListAsync();
         }
 

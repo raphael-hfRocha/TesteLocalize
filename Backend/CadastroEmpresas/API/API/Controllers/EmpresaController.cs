@@ -1,4 +1,5 @@
-﻿using Application.Services;
+﻿using API.DTOs;
+using Application.Services;
 using CadastroEmpresas.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -6,7 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
+using System.Runtime.ConstrainedExecution;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CadastroEmpresas.src.API.Controllers
 {
@@ -22,12 +25,40 @@ namespace CadastroEmpresas.src.API.Controllers
             _empresaService = empresaService;
         }
 
+        [HttpGet("ReturnClass")]
+        [AllowAnonymous]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public Empresa ReturnClass()
+        {
+            return new Empresa
+            {
+                IdEmpresa = 0,
+                NomeEmpresarial = "",
+                NomeFantasia = "",
+                Cnpj = "",
+                Situacao = "",
+                Abertura = "",
+                Tipo = "",
+                NaturezaJuridica = "",
+                AtividadePrincipal = "",
+                Logradouro = "",
+                Numero = "",
+                Complemento = "",
+                Bairro = "",
+                Municipio = "",
+                Uf = "",
+                Cep = ""
+            };
+        }
+
         [HttpGet("{cnpj}")]
         [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<Empresa>> PesquisarEmpresaReceitaWs(String cnpj)
+        public async Task<ActionResult<Empresa>> PesquisarEmpresaReceitaWs(string cnpj)
         {
             var vo = new Empresa
             {
@@ -49,7 +80,7 @@ namespace CadastroEmpresas.src.API.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<Empresa>> PesquisarEmpresaBanco(String cnpj)
+        public async Task<ActionResult<Empresa>> PesquisarEmpresaBanco(string cnpj)
         {
             var vo = new Empresa
             {

@@ -1,6 +1,6 @@
 export default {
     async created() {
-        await this.limparCamposLogin();
+        await this.limparDadosLogin();
         this.usuario.isLoggedIn = false;
     },
     name: 'login',
@@ -45,9 +45,11 @@ export default {
             this.usuario.senha = ''
         },
 
-        async limparCamposLogin() {
-            this.usuario.email = ''
-            this.usuario.senha = ''
+        async limparDadosLogin() {
+            this.usuario.idUsuario = null;
+            this.usuario.nome = '';
+            this.usuario.email = '';
+            this.usuario.senha = '';
             localStorage.removeItem('authToken');
         }
     },
