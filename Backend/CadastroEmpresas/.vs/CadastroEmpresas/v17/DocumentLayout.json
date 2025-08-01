@@ -68,7 +68,7 @@
               "RelativeDocumentMoniker": "API\\API\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\.NET\\Projetos\\TesteLocalize\\Backend\\CadastroEmpresas\\API\\API\\Controllers\\AuthController.cs",
               "RelativeToolTip": "API\\API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAOQBAAAAAAAAAAAAAO8BAAATAAAAAAAAAA==",
+              "ViewState": "AgIAANkBAAAAAAAAAAAAAOEBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-31T07:36:33.347Z",
               "EditorCaption": ""
@@ -83,8 +83,7 @@
               "RelativeToolTip": "Domain\\Domain\\Entities\\Usuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T08:35:11.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T08:35:11.728Z"
             },
             {
               "$type": "Document",
@@ -96,8 +95,7 @@
               "RelativeToolTip": "API\\API\\Controllers\\EmpresaController.cs",
               "ViewState": "AgIAAFYAAAAAAAAAAAAAADIAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T09:24:55.248Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T09:24:55.248Z"
             },
             {
               "$type": "Document",
@@ -109,8 +107,7 @@
               "RelativeToolTip": "Persistence\\Persistence\\ApplicationDbContext.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T09:02:09.18Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T09:02:09.18Z"
             },
             {
               "$type": "Document",
@@ -122,8 +119,7 @@
               "RelativeToolTip": "Application\\Application\\DTOs\\AuthDTOs.cs",
               "ViewState": "AgIAAF4AAAAAAAAAAAAAAGkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T15:03:56.98Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T15:03:56.98Z"
             },
             {
               "$type": "Document",
@@ -135,8 +131,7 @@
               "RelativeToolTip": "Infrastructure\\Infrastructure\\Repositories\\EmpresaRepository.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAAAC8AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T00:39:47.726Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T00:39:47.726Z"
             },
             {
               "$type": "Document",
@@ -148,8 +143,7 @@
               "RelativeToolTip": "Application\\Application\\Services\\EmpresaService.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAAAFIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T07:37:24.44Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T07:37:24.44Z"
             },
             {
               "$type": "Document",
@@ -161,8 +155,7 @@
               "RelativeToolTip": "Infrastructure\\Infrastructure\\Repositories\\AuthRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T00:39:50.437Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T00:39:50.437Z"
             },
             {
               "$type": "Document",

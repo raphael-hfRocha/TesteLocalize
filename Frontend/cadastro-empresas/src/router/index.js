@@ -20,6 +20,14 @@ const router = new Router({
             path: '/empresa',
             name: 'empresa',
             component: Empresa,
+            beforeEnter: (to, from, next) => {
+                const isAuthenticated = localStorage.getItem('authToken');
+                if (!isAuthenticated) {
+                    next({ name: 'login' });
+                } else {
+                    next();
+                }
+            }
         },
         {
             path: '/login',
@@ -29,7 +37,15 @@ const router = new Router({
         {
             path: '/cadastro-empresa',
             name: 'cadastroEmpresa',
-            component: CadastroEmpresa
+            component: CadastroEmpresa,
+            beforeEnter: (to, from, next) => {
+                const isAuthenticated = localStorage.getItem('authToken');
+                if (!isAuthenticated) {
+                    next({ name: 'login' });
+                } else {
+                    next();
+                }
+            }
         },
         {
             path: '/cadastro-usuario',
@@ -38,22 +54,5 @@ const router = new Router({
         }
     ]
 })
-
-router.beforeEach((to, from, next) => {
-    const isAuthenticated = localStorage.getItem('authToken');
-
-    if (to.name === 'empresa' || to.name === 'cadastroEmpresa') {
-        if (isAuthenticated === null) {
-            next({ name: 'login' });
-            next();
-            next();
-        }
-    }
-    if (to.name === 'login' && isAuthenticated) {
-        next({ name: 'empresa' });
-    } else {
-        next();
-    }
-});
 
 export default router;

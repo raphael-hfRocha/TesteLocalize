@@ -1,5 +1,6 @@
 export default {
     async created() {
+        await this.puxarUsuarioLogado();
         await this.verificaUsuarioLogado();
         console.log("Usuário verificado:", this.usuario);
     },
@@ -41,14 +42,12 @@ export default {
         async logout() {
             this.limparDadosUsuario();
             localStorage.removeItem('authToken');
-            this.$router.push({ name: 'login' });
         },
         async verificaUsuarioLogado() {
             if (this.usuario.idUsuario === null) {
                 this.limparDadosEmpresa();
-                await this.logout()
+                await this.logout();
             }
-            await this.puxarUsuarioLogado();
         },
         async cadastrarEmpresa() {
             const empresaData = {
@@ -101,11 +100,11 @@ export default {
             this.empresa.municipio = '',
             this.empresa.uf = '',
             this.empresa.cep = '';
-            this.empresa.usuario.idUsuario = null;
-            this.empresa.usuario.nome = '';
-            this.empresa.usuario.email = '';
-            this.empresa.usuario.senha = '';
-            this.empresa.idUsuario = null;
+        this.empresa.usuario.idUsuario = null;
+        this.empresa.usuario.nome = '';
+        this.empresa.usuario.email = '';
+        this.empresa.usuario.senha = '';
+        this.empresa.idUsuario = null;
     },
     computed: {
         usuario: {

@@ -83,7 +83,6 @@ export default {
         async logout() {
             this.limparDadosUsuario();
             localStorage.removeItem('authToken');
-            this.$router.push({ name: 'login' });
         },
 
         async carregarMinhasEmpresas() {
